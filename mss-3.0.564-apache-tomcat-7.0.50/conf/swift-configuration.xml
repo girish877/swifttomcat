@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Swift Configuration files. This file needs to be placed @ JBoss_Server\configuration 
+	folder -->
+<swift>
+	<serverProperties>
+		<sipServerAddress>slw1643:5080</sipServerAddress>
+		<sipServerIP>slw1643</sipServerIP>
+		<webSocketPort>6060</webSocketPort>
+	</serverProperties>
+	<socketPath>wss://slw1643:8443/SwiftGateway/wssignaling</socketPath>
+	<certificatePath>D://SM_W1//Certificates//mycert.p12</certificatePath>
+	<certificatePassword>evry@1234</certificatePassword>
+	<userProperties>
+		<!-- Maximum registration time for the user. User has to send register 
+			request again to extend the time. -->
+		<maxRegistrationTime>3600</maxRegistrationTime>
+	</userProperties>
+	<confProperties>
+		<!-- Maximum number of users can join in the conference. 0 refers unlimited 
+			number of users. -->
+		<limitConfUsers>10</limitConfUsers>
+		<videoResolution>720p</videoResolution>
+		<!-- Media Server Details Dialogic XMS -->
+		<!-- <mediaServer>
+			<mediaServerAddress>10.10.222.181</mediaServerAddress>
+			<mediaServerName>Dialogic XMS</mediaServerName>
+		</mediaServer>
+		<confRoomNames>conf_demo</confRoomNames>
+		-->
+		
+		<!-- Media Server Details Telepresence -->
+		<mediaServer>
+			<mediaServerAddress>10.10.220.243:20060</mediaServerAddress>
+			<mediaServerName>Telepresence</mediaServerName>
+		</mediaServer>
+		<confServerAddress>10.10.220.243</confServerAddress>
+		<confServerPort>20060</confServerPort>
+		<confRoomNames>500-510</confRoomNames>
+		<!--<confRoomNames>10000</confRoomNames>-->
+		<telepresenceRoomNames>10060,10061,10000,10001,10002,10003,sp100,conf_demo</telepresenceRoomNames>
+		<telepresenceDefaultName>telebridge</telepresenceDefaultName>
+		
+		
+		<!-- Display properties for the Dial-In Conference application in MSML 
+			Format -->
+		<confRoomDisplay>{0,0,1/2},{50%,0,1/2},{0,50%,1/2},{50%,50%,1/2}
+		</confRoomDisplay>
+		<salesAgentNames>1100</salesAgentNames>
+		<!-- Display properties for the Sales Conference application in MSML Format -->
+		<salesRoomDisplay>{0,16.66%,2/3},{67%,33%,1/3},{67%,16.66%,1/3},{67%,50.66%,1/3}
+		</salesRoomDisplay>
+	</confProperties>
+	<callDistribution>
+		<agentDefaultName>agent</agentDefaultName>
+		<agentNames>alice,sowmya,1234,1145,agent1,agent2,agent3,agent4,agent5</agentNames>
+	</callDistribution>
+</swift>

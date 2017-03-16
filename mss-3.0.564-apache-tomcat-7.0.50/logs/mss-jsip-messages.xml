@@ -1,0 +1,24 @@
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= null
+javax.sip.STACK_NAME= Mobicents-SIP-Servlets
+javax.sip.ROUTER_PATH= org.mobicents.ext.javax.sip.dns.DNSAwareRouter
+javax.sip.OUTBOUND_PROXY= null
+-->
+<description
+ logDescription="Mobicents-SIP-Servlets"
+ name="Mobicents-SIP-Servlets"
+ auxInfo="null"/>
+ 
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= null
+javax.sip.STACK_NAME= Mobicents-SIP-Servlets
+javax.sip.ROUTER_PATH= org.mobicents.ext.javax.sip.dns.DNSAwareRouter
+javax.sip.OUTBOUND_PROXY= null
+-->
+<description
+ logDescription="Mobicents-SIP-Servlets"
+ name="Mobicents-SIP-Servlets"
+ auxInfo="null"/>
+ 

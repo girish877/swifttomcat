@@ -1,0 +1,74 @@
+2017-03-16 11:02:55,234 INFO  [org.mobicents.servlet.sip.catalina.SipStandardService] (main) Pretty encoding of headers enabled ? true
+2017-03-16 11:02:55,234 INFO  [org.mobicents.servlet.sip.catalina.SipStandardService] (main) Sip Stack path name : org.mobicents.ha.balancing.only
+2017-03-16 11:02:55,470 INFO  [org.mobicents.servlet.sip.catalina.SipStandardService] (main) Mobicents Sip Servlets sip stack properties : {gov.nist.javax.sip.MESSAGE_PROCESSOR_FACTORY=gov.nist.javax.sip.stack.NioMessageProcessorFactory, gov.nist.javax.sip.DEBUG_LOG=D:\SM_Microservices\Docker\swifttomcat1\swifttomcat\mss-3.0.564-apache-tomcat-7.0.50/logs/mss-jsip-debuglog.txt, gov.nist.javax.sip.PASS_INVITE_NON_2XX_ACK_TO_LISTENER=true, javax.net.ssl.keyStorePassword=evry@1234, gov.nist.javax.sip.MAX_LISTENER_RESPONSE_TIME=120, gov.nist.javax.sip.LOG4J_LOGGER_NAME=gov.nist, javax.sip.AUTOMATIC_DIALOG_SUPPORT=off, gov.nist.javax.sip.SERVER_LOG=D:\SM_Microservices\Docker\swifttomcat1\swifttomcat\mss-3.0.564-apache-tomcat-7.0.50/logs/mss-jsip-messages.xml, javax.net.ssl.keyStore=conf/mycert.p12, javax.net.ssl.keyStoreType=PKCS12, gov.nist.javax.sip.REENTRANT_LISTENER=true, gov.nist.javax.sip.MAX_FORK_TIME_SECONDS=0, javax.net.ssl.trustStorePassword=evry@1234, org.mobicents.ha.javax.sip.REPLICATE_APPLICATION_DATA=false, gov.nist.javax.sip.RECEIVE_UDP_BUFFER_SIZE=65536, javax.sip.STACK_NAME=Mobicents-SIP-Servlets, org.mobicents.servlet.sip.USER_AGENT_HEADER=Mobicents Sip Servlets 3.0.0-SNAPSHOT, gov.nist.javax.sip.TCP_POST_PARSING_THREAD_POOL_SIZE=30, gov.nist.javax.sip.LOOSE_DIALOG_VALIDATION=true, org.mobicents.ha.javax.sip.REPLICATION_STRATEGY=ConfirmedDialog, org.mobicents.servlet.sip.SERVER_HEADER=Mobicents Sip Servlets 3.0.0-SNAPSHOT, gov.nist.javax.sip.AGGRESSIVE_CLEANUP=true, gov.nist.javax.sip.TRACE_LEVEL=LOG4J, gov.nist.javax.sip.MAX_MESSAGE_SIZE=10000, gov.nist.javax.sip.AUTOMATIC_DIALOG_ERROR_HANDLING=false, gov.nist.javax.sip.TLS_CLIENT_AUTH_TYPE=Disabled, gov.nist.javax.sip.SEND_UDP_BUFFER_SIZE=65536, javax.net.ssl.trustStore=conf/mycert.p12, gov.nist.javax.sip.LOG_MESSAGE_CONTENT=true, gov.nist.javax.sip.THREAD_POOL_SIZE=64, gov.nist.javax.sip.DELIVER_UNSOLICITED_NOTIFY=true, javax.sip.ROUTER_PATH=org.mobicents.ext.javax.sip.dns.DNSAwareRouter}
+2017-03-16 11:02:55,501 INFO  [gov.nist.javax.sip.stack.SIPTransactionStack] (main) value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+2017-03-16 11:02:55,501 INFO  [gov.nist.javax.sip.stack.SIPTransactionStack] (main) Setting Stack Thread priority to 10
+2017-03-16 11:02:55,501 INFO  [gov.nist.javax.sip.SipStackImpl] (main) using Disabled tls auth policy
+2017-03-16 11:02:55,501 ERROR [gov.nist.javax.sip.SipStackImpl] (main) could not instantiate SSL networking
+java.io.FileNotFoundException: conf\mycert.p12 (The system cannot find the path specified)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at java.io.FileInputStream.<init>(FileInputStream.java:97)
+	at gov.nist.core.net.SslNetworkLayer.<init>(SslNetworkLayer.java:116)
+	at gov.nist.javax.sip.SipStackImpl.<init>(SipStackImpl.java:913)
+	at org.mobicents.ext.javax.sip.SipStackImpl.<init>(SipStackImpl.java:59)
+	at org.mobicents.ha.javax.sip.ClusteredSipStackImpl.<init>(ClusteredSipStackImpl.java:81)
+	at org.mobicents.ha.balancing.only.javax.sip.SipStackImpl.<init>(SipStackImpl.java:52)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:525)
+	at javax.sip.SipFactory.createStack(SipFactory.java:314)
+	at javax.sip.SipFactory.createSipStack(SipFactory.java:152)
+	at org.mobicents.servlet.sip.catalina.SipStandardService.initSipStack(SipStandardService.java:528)
+	at org.mobicents.servlet.sip.catalina.SipStandardService.initInternal(SipStandardService.java:265)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:814)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:639)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:664)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:281)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:455)
+2017-03-16 11:02:55,517 WARN  [gov.nist.javax.sip.SipStackImpl] (main) using default tls security policy
+2017-03-16 11:02:55,517 WARN  [gov.nist.core.net.DefaultSecurityManagerProvider] (main) Using default truststore type jks
+2017-03-16 11:04:36,274 INFO  [org.mobicents.servlet.sip.catalina.SipStandardService] (main) Pretty encoding of headers enabled ? true
+2017-03-16 11:04:36,274 INFO  [org.mobicents.servlet.sip.catalina.SipStandardService] (main) Sip Stack path name : org.mobicents.ha.balancing.only
+2017-03-16 11:04:36,462 INFO  [org.mobicents.servlet.sip.catalina.SipStandardService] (main) Mobicents Sip Servlets sip stack properties : {gov.nist.javax.sip.MESSAGE_PROCESSOR_FACTORY=gov.nist.javax.sip.stack.NioMessageProcessorFactory, gov.nist.javax.sip.DEBUG_LOG=D:\SM_Microservices\Docker\swifttomcat1\swifttomcat\mss-3.0.564-apache-tomcat-7.0.50/logs/mss-jsip-debuglog.txt, gov.nist.javax.sip.PASS_INVITE_NON_2XX_ACK_TO_LISTENER=true, javax.net.ssl.keyStorePassword=evry@1234, gov.nist.javax.sip.MAX_LISTENER_RESPONSE_TIME=120, gov.nist.javax.sip.LOG4J_LOGGER_NAME=gov.nist, javax.sip.AUTOMATIC_DIALOG_SUPPORT=off, gov.nist.javax.sip.SERVER_LOG=D:\SM_Microservices\Docker\swifttomcat1\swifttomcat\mss-3.0.564-apache-tomcat-7.0.50/logs/mss-jsip-messages.xml, javax.net.ssl.keyStore=conf//mycert.p12, javax.net.ssl.keyStoreType=PKCS12, gov.nist.javax.sip.REENTRANT_LISTENER=true, gov.nist.javax.sip.MAX_FORK_TIME_SECONDS=0, javax.net.ssl.trustStorePassword=evry@1234, org.mobicents.ha.javax.sip.REPLICATE_APPLICATION_DATA=false, gov.nist.javax.sip.RECEIVE_UDP_BUFFER_SIZE=65536, javax.sip.STACK_NAME=Mobicents-SIP-Servlets, org.mobicents.servlet.sip.USER_AGENT_HEADER=Mobicents Sip Servlets 3.0.0-SNAPSHOT, gov.nist.javax.sip.TCP_POST_PARSING_THREAD_POOL_SIZE=30, gov.nist.javax.sip.LOOSE_DIALOG_VALIDATION=true, org.mobicents.ha.javax.sip.REPLICATION_STRATEGY=ConfirmedDialog, org.mobicents.servlet.sip.SERVER_HEADER=Mobicents Sip Servlets 3.0.0-SNAPSHOT, gov.nist.javax.sip.AGGRESSIVE_CLEANUP=true, gov.nist.javax.sip.TRACE_LEVEL=LOG4J, gov.nist.javax.sip.MAX_MESSAGE_SIZE=10000, gov.nist.javax.sip.AUTOMATIC_DIALOG_ERROR_HANDLING=false, gov.nist.javax.sip.TLS_CLIENT_AUTH_TYPE=Disabled, gov.nist.javax.sip.SEND_UDP_BUFFER_SIZE=65536, javax.net.ssl.trustStore=conf//mycert.p12, gov.nist.javax.sip.LOG_MESSAGE_CONTENT=true, gov.nist.javax.sip.THREAD_POOL_SIZE=64, gov.nist.javax.sip.DELIVER_UNSOLICITED_NOTIFY=true, javax.sip.ROUTER_PATH=org.mobicents.ext.javax.sip.dns.DNSAwareRouter}
+2017-03-16 11:04:36,493 INFO  [gov.nist.javax.sip.stack.SIPTransactionStack] (main) value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+2017-03-16 11:04:36,493 INFO  [gov.nist.javax.sip.stack.SIPTransactionStack] (main) Setting Stack Thread priority to 10
+2017-03-16 11:04:36,493 INFO  [gov.nist.javax.sip.SipStackImpl] (main) using Disabled tls auth policy
+2017-03-16 11:04:36,493 ERROR [gov.nist.javax.sip.SipStackImpl] (main) could not instantiate SSL networking
+java.io.FileNotFoundException: conf\mycert.p12 (The system cannot find the path specified)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at java.io.FileInputStream.<init>(FileInputStream.java:97)
+	at gov.nist.core.net.SslNetworkLayer.<init>(SslNetworkLayer.java:116)
+	at gov.nist.javax.sip.SipStackImpl.<init>(SipStackImpl.java:913)
+	at org.mobicents.ext.javax.sip.SipStackImpl.<init>(SipStackImpl.java:59)
+	at org.mobicents.ha.javax.sip.ClusteredSipStackImpl.<init>(ClusteredSipStackImpl.java:81)
+	at org.mobicents.ha.balancing.only.javax.sip.SipStackImpl.<init>(SipStackImpl.java:52)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:525)
+	at javax.sip.SipFactory.createStack(SipFactory.java:314)
+	at javax.sip.SipFactory.createSipStack(SipFactory.java:152)
+	at org.mobicents.servlet.sip.catalina.SipStandardService.initSipStack(SipStandardService.java:528)
+	at org.mobicents.servlet.sip.catalina.SipStandardService.initInternal(SipStandardService.java:265)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:814)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:639)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:664)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:281)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:455)
+2017-03-16 11:04:36,493 WARN  [gov.nist.javax.sip.SipStackImpl] (main) using default tls security policy
+2017-03-16 11:04:36,493 WARN  [gov.nist.core.net.DefaultSecurityManagerProvider] (main) Using default truststore type jks

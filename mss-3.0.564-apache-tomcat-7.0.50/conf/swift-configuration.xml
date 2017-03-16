@@ -8,7 +8,7 @@
 		<webSocketPort>6060</webSocketPort>
 	</serverProperties>
 	<socketPath>wss://slw1643:8443/SwiftGateway/wssignaling</socketPath>
-	<certificatePath>D://SM_W1//Certificates//mycert.p12</certificatePath>
+	<certificatePath>conf/mycert.p12</certificatePath>
 	<certificatePassword>evry@1234</certificatePassword>
 	<userProperties>
 		<!-- Maximum registration time for the user. User has to send register 

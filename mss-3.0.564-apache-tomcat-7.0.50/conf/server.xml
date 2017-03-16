@@ -80,7 +80,7 @@
                clientAuth="false" sslProtocol="TLS" sslEnabledProtocols="TLSv1,TLSv1.1,TLSv1.2" />
     -->
 	
-	<Connector SSLEnabled="true" clientAuth="false" keystoreFile="D://SM_W1//Certificates//mycert.p12" keystorePass="evry@1234" keystoreType="PKCS12" maxThreads="150" port="8443" protocol="org.apache.coyote.http11.Http11Protocol" scheme="https" secure="true" sslEnabledProtocols="TLSv1,TLSv1.1,TLSv1.2" sslProtocol="TLS"/>
+	<Connector SSLEnabled="true" clientAuth="false" keystoreFile="conf/mycert.p12" keystorePass="evry@1234" keystoreType="PKCS12" maxThreads="150" port="8443" protocol="org.apache.coyote.http11.Http11Protocol" scheme="https" secure="true" sslEnabledProtocols="TLSv1,TLSv1.1,TLSv1.2" sslProtocol="TLS"/>
 	
 	
 	<!-- <Connector SSLEnabled="true" acceptCount="100" clientAuth="false" disableUploadTimeout="true" enableLookups="false" keystoreFile="D:\SM_W1\Certificates\device.crt"	keystorePass="evry@1234" maxThreads="25" port="8443" protocol="org.apache.coyote.http11.Http11NioProtocol" scheme="https" secure="true" sslProtocol="TLS"/> -->
